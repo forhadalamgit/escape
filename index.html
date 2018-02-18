@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
+
+        <link rel="stylesheet" href="css/aos.css">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/owl.carousel.css">
         <link rel="stylesheet" href="css/owl.theme.default.css">
@@ -87,7 +89,7 @@
     =            header            =
     =============================-->
 
-    <div class="header_area">
+    <div class="header_area" data-aos="fade-up" data-aos-anchor-placement="center-center">
 
 
         <div class="menu_area container">
@@ -134,7 +136,7 @@
                 </div>
             </div>
                    
-                    
+        </div>         
 
      </div>           
 
@@ -148,7 +150,7 @@
 
 
 
-        <div class="default-content con-1 bg-white con-small">
+        <div class="default-content con-1 bg-white con-small" data-aos="fade-up"data-aos-anchor-placement="center-center">
             <div class="container">
                <div class="text-wrapper text-bg-1">
                    <div class="text text-1">
@@ -169,7 +171,7 @@
         =            content            =
         ==============================-->
         
-         <div class="default-content con-2 bg-dark con-small">
+         <div class="default-content con-2 bg-dark con-small" data-aos="fade-up" data-aos-anchor-placement="center-center">
             <div class="container">
                 <div class="text-wrapper text-bg-2">
                     <div class="text text-2">
@@ -191,7 +193,7 @@
 
 
         
-        <div class="products-area">
+        <div class="products-area" data-aos="fade-up" data-aos-anchor-placement="center-center">
             <div class="container">
                 
                     <div class="products-items">
@@ -249,7 +251,7 @@
         =            Awesome Client            =
         ==============================-->
         
-        <div class="awesome-client-area">
+        <div class="awesome-client-area" data-aos="fade-up" data-aos-anchor-placement="center-center">
             <div class="container">
                 <div class="awe-client-headings">
                     <h2>Awesome<span>Clients</span></h2>
@@ -279,7 +281,7 @@
         =            banner promotion            =
         =======================================-->
         
-        <div class="banner-promo">
+        <div class="banner-promo" data-aos="fade-up" data-aos-anchor-placement="center-center">
             <div class="container">
                <div class="banner-wrapper">
                 <a href=""><img src="img/envato.png" alt=""></a>
@@ -296,7 +298,7 @@
         <!--==================================
         =            Amazing Team            =
         ===================================-->
-        <div class="Amazing-team">
+        <div class="Amazing-team" data-aos="fade-up" data-aos-anchor-placement="center-center">
             <div class="container">
                 <div class="amaz-heading">
                     <h2>Amazing<span>Team</span></h2>
@@ -343,7 +345,7 @@
         <!--===============================
         =            Say Hello            =
         ================================-->
-        <div class="footer_wrapper">
+        <div class="footer_wrapper" data-aos="fade-up" data-aos-anchor-placement="center-center">
             <div class="say-hello">
                 <div class="container">
                     <div class="say-hello-content">
@@ -386,11 +388,12 @@
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/owl.carousel.min.js"></script>
+        <script src="js/aos.js"></script>
         <script>
             $(document).ready(function() {
                 $("#owl-demo").owlCarousel({
                         items:1,
-                        nav:false,
+                        nav:true,
                         dots:false,
                         autoplay:true,
                         loop:true,
@@ -408,7 +411,12 @@
                     $(".slider_info h4, .slider_info h1").addClass("animated fadeInUp").css("opacity","1");                  
                     $(".slider_info button").addClass("animated swing custom_animated").css("opacity","1");
                 })
-            })
+            });
+
+            AOS.init({
+                 easing: 'ease-in-out-sine'
+            });
+
         </script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
